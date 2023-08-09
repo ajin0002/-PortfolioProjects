@@ -1,3 +1,4 @@
+-- EDA of Covid Data
 Create database PortflioProject;
 use PortflioProject;
 -- changing datatypes 
@@ -11,7 +12,7 @@ alter table covidvaccinations change column ï»¿iso_code iso_code varchar(10);
 update covidvaccinations set date = str_to_date(date, '%m/%d/%Y') ;
 alter table portflioproject.covidvaccinations modify column new_vaccinations int;
 
--- Actual work
+-- Looking At Data
 select location,date,total_cases,new_cases,total_deaths,population
  from portflioproject.coviddeaths order by location,date;
  
